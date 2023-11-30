@@ -57,7 +57,7 @@
 
 ## Credits 	
 ### Yezer
-I am Christian Yezer and I have made this repository to publish future versions of INSSIST with PRO functions. I hope you like my contribution, regards. ♡
+I am Christian Yezer and I have made this repository to publish future versions of GrowBot with BUYED functions. I hope you like my contribution, regards. ♡
 
 <p align="center">
 	<img src="https://64.media.tumblr.com/f29e750fc61706fbe8eb96a8ad2d1031/tumblr_mfbfgkrRAz1rfjowdo1_500.gif" alt="InstaPy reach" width="220px"/>
