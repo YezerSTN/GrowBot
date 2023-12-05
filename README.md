@@ -36,7 +36,9 @@
 
 <br />
 
-
+<p align="center">
+  <img src="https://github.com/YezerSTN/GrowBot/assets/109930585/c2d7f5f3-b1cc-465c-b21f-935ad4ccebff" width="1400">
+	
 ## How to Use
 
 **STEP 1** Using this extension is easy, just go to [releases](https://github.com/YezerSTN/GrowBot/releases/) and download the latest version. 
