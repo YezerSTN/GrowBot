@@ -1,0 +1,560 @@
+<!--
+* Copyright (C) Growbot 2016-2023 - All Rights Reserved
+*
+* Unauthorized copying of this file, via any medium is strictly prohibited
+* Proprietary and confidential
+* Written by Growbot <growbotautomator@gmail.com>, 2016-2023
+    -->
+    <div id="igBotInjectedContainer" class="igBotParent">
+        <div id="igBotDialog">
+            <div id="igBotDialogQuestion">Question text goes here?</div>
+            <div class="igBotInjectedButton" id="btnDialogOK">OK</div>
+            <div class="igBotInjectedButton" id="btnDialogCancel">Cancel</div>
+        </div>
+        <div id="igBotLeft">
+            <div id="igBotHeading">
+                <div style="display: flex;">
+                    <h1 id="h1GrowbotHeading">GrowBot Automator for Instagram™</h1>
+                    <h2 id="h2FreeTrialTimeLeft"></h2>
+                </div>
+            </div>
+            <div class="pc-tab">
+                <input checked="checked" id="tab1" type="radio" name="pct" />
+                <input id="tab2" type="radio" name="pct" />
+                <input id="tab3" type="radio" name="pct" />
+                <input id="tab4" type="radio" name="pct" />
+                <input id="tab5" type="radio" name="pct" />
+                <input id="tab6" type="radio" name="pct" />
+                <input id="tab7" type="radio" name="pct" />
+                <input id="tab8" type="radio" name="pct" />
+                <nav>
+                    <ul>
+                        <li class="tab1"> <label for="tab1">Accounts Queue</label> </li>
+                        <li class="tab2"> <label for="tab2">Media Queue</label> </li>
+                        <li class="tab8" style="display: none;"> <label for="tab8">Actions Queue</label> </li>
+                        <li class="tab3"> <label for="tab3">Filters</label> </li>
+                        <li class="tab4"> <label for="tab4">Settings</label> </li>
+                        <li class="tab5"> <label for="tab5">Log</label> </li>
+                        <li class="tab6"> <label for="tab6">News &amp; Updates</label> </li>
+                        <li class="tab7"> <label for="tab7">Help &amp; FAQ</label> </li>
+                    </ul>
+                </nav>
+                <section id="mainSection">
+                    <div class="tab1">
+                        <div id="queueQuantityRow">
+                            <div id="pager" class="pager">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACSUlEQVR4AWSSA4xcARCGG6uxL7bdixvWbsOLa9uN+nJx3a7Otm1jVa5t276dvpm07/SSfzn/NzwAALt0VAgVrCpZnWJVRaLP9FvF3vidxoOsDr0Zit8d3HTyJb+NG0q1NqxQacLrP3QbvStW/su+yF2MwVgOsMN8uHvNwyi0Zr0vFIdkpgDFrTIpkc6D2x8B8Q+VvmnWzGAsejgAUtGs0lmS2VwR8MnkSxBJFiDMKpUr0W/JTB7WZX+S9VMGBj0EwL6wbMz83+yO5MATzYEvmkfR5yGJn4PMLon1jzp8d9GLgMrBDQcfy8YHM16qXoEbQvUu8zW+CpyhLMXorF7g9Un46EXAKfEvwwb2jKWGEghYJgBWMsCazzFyAtiDWYinixCIZqC5Z3wDvQio+qNUh3FYaA7G83CJWYbrAhXwp+z4GUUAqz9DVeSLW9DR1RNGLwF+K1QIQDPp4ttFMgimHbsAZl/mXxUFaG5t5wCnVuWajWgyB4lMEfwxBCyQwRbIYFUcwORN02aMrijw6ru4Fiq7Fk18uzsE5TLg4Cj4Co8yorAq+s3gTkOhVIYlqQYY0SQ3xIqn3cG7i2syfTiexQBufUZPGoVG/E4JTGz2r7Vt+qsiI62ROyTesIIZm1tL+iIpCoymitgvtoGrJbDRFYEv9d3J17wpOqR9p/y+S8a09Y3pJX9MYPfFaSbYs8YWhuk1BbznNelffp3Yd8ocBKm3Gmx3q+um+R+FrRs8gejv3k6YNPVtx8Q5RysnrpuaMPUGRmaiODsDAKw/CRKUFv+sAAAAAElFTkSuQmCC" class="first" />
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACXklEQVR4AWyTA4ycARCFG6uxL7Z9FzesbUe1bZ9t27Zt27b5r63X/xXnSd5yvjfY2QMAduhIMKxE2Yg6KeoGxdf8jN/tzt8OHhRl/SVb/jSraT6wpWe8sX9wWOgbGBIaOkca02qnAz+mS54yh7n/ue3woZT6Jdu+4cnRlQ05lBoDjGYLKIVaj8VVCZo7B0ajyyZtmUtmu4E14YGRKaVWZwRDozdBojRAEKXSmcBQavRoaOtVRhSP2ZIBDTgX22bl//C6XI/5DS1WpHoKS1Idplc1myZl1c2jrxJXnpKlgU1W41wg294O3/Do3AFfd2/n52CMTC8jIL0lkCwNTjZ3jzVyZrY6u67FJYd6GmBRosPkigZnvxbQgN9BrjZiTapBTGpBI1ka3OjtHxS4rFWZHhfta0TVggArn/mSL6oA19zawPfsQm80IzE5VSD7x6Cnb4AG2FAYcNOrFxd+VYIGNLzi1IjzP0px1aWF3fzrwoCYuIRNg5N17UONUqUOCo0RC4I4v2ePOEI3ZtY0BGgmqhMTy2rwlxlfkCIgInlzBJvkqonA2cUNWCwAAbZ526cPrEix9VvevRhbVMNgsqC6dQi2IUWbS7R6m7L+tKq+bVSQa8EgxOqsOL6kBkE+s8DEghR+YfGjd0PGn5LdPKSAnD7b/PJ65YpEBSZKVUawGxrxmFh5fEEC34gU5eeAYlsye07ZI7nNNj49f7SldwKzK3JwJ5x5aEZASX0fPAKiRz/6FW6e8r5/pkeRM0/tw0sCvYLjGgOCQgQfv0DBxTei8bNv1u9NTZh6AyMzUZydAcyECTzxVTE0AAAAAElFTkSuQmCC" class="prev" /> <span class="pagedisplay"></span>
+                                Page:
+                            <select class="gotoPage" title="Select page number"></select>
+                            <!-- this can be any element, including an input -->
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACWUlEQVR4AWxTA6xbYRhdrMV+se334oVzNCOabdu2qtm2zXLeatvt7V3N17N7hjve5JTf0Y8eAP5AHzU6JHRJGChhNMHP/I3//T3/O7GnhM7l1/MzrhkiStMnj95icwhmq13QvXfqL70MKJdczs3gDGd/E5DJvS5o4+vMDp8rmc2jWGmg2d0GUSjXEUvlYHxvdR1/5FvHWXJkAaqSbHX6i9VaE3wq9RZyxQYECaVaiz9JonXo3nwuHrnvpkgnKMBejE3nn2RvoozUlzqS4ne4Y2XEcjVZ5NFzo2vu2eQMcinQdU0fVjI2n0y+jmGbtCSRjLhYw5ANL2GLFBHJVsHHGUhAcdmkJJcCA40f3Xp2ZlSShm7USngJZ6yEqFCVBF6AsIaLyJebSIsVnLh4R08uBUZ/ttgELla20AAF6EiM2GqCJ17GkHUvJDzD8M0G8Hu92Y2z5y8K5H4T+GS2UgCMz64kD99iAF0pOnjtM9aS3p/yu5SigROnzsgCA1+9tevFYg2FShPsSTJdORxIVWQyDbgznqgIxZHzcoWu88+8ylAsi3YbCGWqYFySfckKiMFrnoK7woVttNp4/tqOdZp78iJ2LLiQmfFM+8Yl5KvyTpDI7WRnkrmgNPBGRew/dNo1QeOZQa58kBQ3zOtuP9YWk7nvg2KpyTQIpis8THSGJ5rDviMXissU9+WD9MdR3nn+zbrTl2+7TJ+9CCXzXBN2hj0o4IHWjJ2K464l++/KR/m/l2nq0eCMDYcfKHerT+kVKo2wd79S2LrviH7ZvmvKsUrn12FkJoqzMwDjPghf3VdFcgAAAABJRU5ErkJggg==" class="next" />
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACXElEQVR4AWRTA4wcYRi9WI19se3buGEd1Yhr241qu7M427a5PNs2Z229zjtjkrf8nn6EANiBg0qESpBJOCbhArH+Wcb/ds9vJ+6TEPYq13I7RzctN3QMa7t7+8Wunj5R0zqgzagflz/PNN7mDGe3C2yQ96ep59509Y8OLqxYYHN64QsECVgdHswuGqFv7RmMrRh9w1lytguEkdwzMGZzuX3g4/T4YbR5IUqwu/0AIIl6oGnqtEWVDlEkDBRgL8am8wa5sHkJi2YPFkxrmDO5MWt0b4pU1OoHHyQvsE4oBWQ52ik5Y/NZtnhw+oMa+U2Lm+ST7+pxTdkLpuEzMD4PIdMgJ5cCx/TtQ1p2ZlSSTr1XS6hHrmERM6JLEqgDBVasXlgcPiyZnIhLL9KSS4ELnd29IheLAxSgI3H2swHy0kmcfFOHq4oeMN30igseXwDJqekiuSF86ejqoQA4wK4kn/mkA50VZVM48boGV+RrApPLLimFF3EJSZsCxxqa+7QmmxtWpw90IJmuTDS+6JQEqkEBLix3ZnjGBCEqdbOCLLVmRD45u4JgEHSQyDUgeXTBCYLkS0IPWM/rD6K2sQ9vVCWbixj6OG35do26aVC0uDZ3gsSReQeG5xwkbpJHJPe/EYmDl1XDa9u4cZCEvK43hZVq24LRDiYx2X1gmoklJ7ePZCm6EX+i0mwvhdKtg7T9KH9PbXqTmFk4aOgcweSCBVwTdu6bEFGm7sJ3IXbw+d/i7Ud572W6ET1x+11kmfynMkErKFTi779y8fOfKO3LPzny/0uYegMjM1GcnQFvhQh62IVc5gAAAABJRU5ErkJggg==" class="last" />
+                            <select id="paginationLimit" class="pagesize" title="Select page size">
+                                <option value="10">10</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                                <option value="5000">5000</option>
+                                <option value="9999999999">All</option>
+                            </select>
+                            
+                        </div>
+                        <div id="igBotQueueCount"></div>
+                        <div id="igBotQueueSelectedCount"></div>
+                    </div>
+                        <div id="igBotQueueContainer">
+                            <div class="igBotQueueContainerMessage">
+                                <p>1. This is the <i>queue</i>. Use the Load button below to get some accounts to work on. </p>
+                                <p>2. <i>Optional</i>: You can select, remove, whitelist, etc using the With Selection button</p>
+                                <p>3. Use the "Process Queue" button to start following, unfollowing, liking etc.</p>
+                                <p>4. Please read the Help &amp; FAQ</p>
+                                <p>5. If you experience any issues, <b>read the FAQ</b>, then please email <a href="mailto:growbotautomator@gmail.com" class="growbotEmailLink">growbotautomator@gmail.com</a></p>
+                                <br>
+                            </div>
+                        </div>
+                
+                    <div id="igBotBottom">
+                        <div id="igBotStatusDiv">Ready to accept commands</div>
+                        <div id="igBotQueueContainerButtons">
+                            <div class="igBotInjectedButton flex7" id="btnLoadMenu">Load Accounts &#x2191;<div class="hiddenHover">
+                                <div class="igBotInjectedButton" id="btnViewWhiteList" title="" localeMessage="LoadWhiteList">Load whitelist</div>
+                                <div class="igBotInjectedButton flex7" id="btnLoadPendingRequests" title="Load requests to follow private accounts which have not been approved or rejected yet (these count toward your follower total)" localeMessage="LoadPendingFollowRequests">Load Pending Follow Requests</div>
+                                <div class="igBotInjectedButton inactive flex7" id="btnLoadHashtagPosters" title="Loads accounts which posted with the current hashtag into the queue" localeMessage="LoadCurrentHashtagPosters">Load Posters from Hashtag Page</div>
+                                <div class="igBotInjectedButton inactive flex7" id="btnGetLikers" title="Loads accounts which liked the current pages media" localeMessage="LoadLikers">Load Likers</div>
+                                <div class="igBotInjectedButton inactive flex7" id="btnGetCommenters" title="Loads accounts which commented on the current pages media" localeMessage="LoadCommenters">Load Commenters</div>
+                                <div class="igBotInjectedButton inactive flex7" id="btnGetAllUsersFollowing" title="Loads accounts which the current page account is following into the queue" localeMessage="LoadCurrentFollowing">Load Current Page's Following</div>
+                                
+                                <div class="igBotInjectedButton inactive flex7" id="btnGetAllUsersFollowers" title="Loads the current page's followers into the queue" localeMessage="LoadCurrentFollowers">Load Current Page's Followers</div>
+                                <div class="igBotInjectedButton flex7" id="btnLoadSavedQueue" localeMessage="LoadQueue">Load Queue</div>
+                                <label for="cbLimitQueueSize" id="lblLimitQueueSize">
+                                    <input type="checkbox" checked="checked" id="cbLimitQueueSize"><span localeMessage="queueLimit">Limit queue to</span>
+                                    <input type="number" value="50" min="1" id="txtLimitQueueSize">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="igBotInjectedButton needsSelectedAccts flex7" id="btnSelectionMenu">Select... &#x2191;
+                            <div class="hiddenHover">
+                                <div class="igBotInjectedButton needsSelectedAccts" id="btnAddToWhiteList" title="Add selected accounts to list of accounts never to UNfollow" localeMessage="AddToWhitelist">Add selected to whitelist</div>
+                                <div class="igBotInjectedButton needsQueueAccts" id="btnInvertSelection" title="Select the opposite of what is currently selected" localeMessage="InvertSelection">Invert selection</div>
+                                <div class="igBotInjectedButton needsSelectedAccts" id="btnSelectNone" title="Select nothing" localeMessage="SelectNone">Select None</div>
+                                <div class="igBotInjectedButton needsQueueAccts" id="btnSelectAll" title="Select all shown accounts" localeMessage="SelectAll">Select All</div>
+                                <div class="igBotInjectedButton needsSelectedAccts" id="btnRemoveSelected" title="Remove all the selected accounts" localeMessage="RemoveSelected">Remove selected</div>
+                            </div>
+                        </div>
+                        <div id="btnProcessQueueHolder" class="igBotInjectedButton">
+                            <div class="igBotInjectedButton needsQueueAccts" id="btnProcessQueue" localeMessage="ProcessQueue">Process Queue &#x2191;</div>
+                            <div class="hiddenHover">
+                                <div class="processQueueRadioButtons">
+                                    <label for="radioFollow">
+                                        <input type="radio" id="radioFollow" name="queueAction" value="radioFollow" checked /> <span localeMessage="Follow">Follow</span>
+                                    </label>
+                                    <label for="radioFollowAndLike">
+                                        <input type="radio" id="radioFollowAndLike" name="queueAction" value="radioFollowAndLike" /> <span>Follow + Like </span><input type="number" value="1" step="1" min="0" max="12" id="numberFollowLikeLatestPics">
+                                        <span>Pic(s)</span>
+                                    </label>
+                                    <label for="radioLikeOnly">
+                                        <input type="radio" id="radioLikeOnly" name="queueAction" value="radioNone" /> <span localeMessage="LikeOnly">Like Only</span>
+                                    </label>
+                                    <label for="radioUnFollow">
+                                        <input type="radio" id="radioUnFollow" name="queueAction" value="radioUnFollow" /> <span localeMessage="Unfollow">Unfollow</span>
+                                    </label>
+                                    <label for="radioRemoveFromFollowers">
+                                        <input type="radio" id="radioRemoveFromFollowers" name="queueAction" value="radioRemoveFromFollowers" /> <span localeMessage="RemoveFromFollowers">Remove Follower</span>
+                                    </label>
+                                    <label for="radioBlock">
+                                        <input type="radio" id="radioBlock" name="queueAction" value="radioBlock" /> <span localeMessage="Block">Block</span>
+                                    </label>
+                                    <label for="radioGetMoreData">
+                                        <input type="radio" id="radioGetMoreData" name="queueAction" value="radioGetMoreData" title="Gets more data about each account in queue: Private Status, Followers, Following, Post Count"><span localeMessage="GetMoreData">Get More Data</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="igBotInjectedButton needsQueueAccts flex7" id="btnSaveQueueToStorage" localeMessage="SaveQueue">Save Queue</div>
+                        <div class="igBotInjectedButton needsWhitelistAccts" id="btnSaveWhiteList" title="Saves the whitelist to local storage and/or disk" localeMessage="SaveWhiteList">Save whitelist</div>
+                        <div class="igBotInjectedButton inactive" id="btnStop" localeMessage="Stop">Stop!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab2">
+                <div id="igBotMediaQueueContainer"></div>
+                <div id="igBotMediaButtonContainer">
+                    <div class="igBotInjectedButton inactive" id="btnLikeHashtag"><span localeMessage="Like">Like</span>
+                    <input type="number" value="10" id="numberToLikeHashtag" min="1"></input> <span localeMessage="PostsFrom">Posts from</span> <span class="hashtagName" localeMessage="HashtagPage">Hashtag Page</span></div>
+                    <div class="igBotInjectedButton" id="btnLikeFeed"><span localeMessage="Like">Like</span>
+                    <input type="number" value="10" id="numberToLike" min="1"></input> <span localeMessage="PostsFromFeed">Posts from Feed</span></div>
+                </div>
+            </div>
+            <div class="tab8">
+                <div>
+                    <h3>Pending Actions</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+            <div class="tab3">
+                <div id="multiFilter">
+                    <h3 localeMessage="AccountFilters">Account Filters</h3>
+                    <div localeMessage="AccountFiltersHint">You can enable automatically apply filters when following or unfollowing in settings. This is recommended for efficiency and avoiding rate limits.</div>
+                    <div id="sliders">
+                        <span localeMessage="Followers">Followers</span>
+                        <div id="followersSlider"></div>
+                        <span localeMessage="Following">Following</span>
+                        <div id="followingSlider"></div>
+                        <span localeMessage="FollowRatio">Follow Ratio</span>
+                        <div id="followRatioSlider"></div>
+                        <span localeMessage="MutualFollowedBy">Mutual Followed By (Followers in Common)</span>
+                        <div id="mutualFollowedBySlider"></div>
+                        <span localeMessage="Posts">Posts</span>
+                        <div id="postsSlider"></div>
+                        <span localeMessage="LastPosted">Last Posted (days ago) Note: Growbot cannot know when a private account last posted, so this filter does not apply to private accounts..</span>
+                        <div id="lastPostedSlider"></div>
+                    </div>
+                    <label for="cbFilterNoProfilePic" id="lblFilterNoProfilePic">
+                        <input type="checkbox" id="cbFilterNoProfilePic" checked="checked" /> <span localeMessage="HasNoProfilePicture">Has No Profile Picture</span>
+                    </label>
+                    <label for="cbFilterProfilePic" id="lblFilterProfilePic">
+                        <input type="checkbox" id="cbFilterProfilePic" checked="checked" /> <span localeMessage="HasProfilePicture">Has Profile Picture</span>
+                    </label>
+                    <label for="cbFilterJoinedRecently">
+                        <input type="checkbox" id="cbFilterJoinedRecently" checked="checked" /> <span localeMessage="JoinedRecentlyAccounts">Joined Recently Accounts</span></label>
+                        <label for="cbFilterNonJoinedRecently">
+                            <input type="checkbox" id="cbFilterNonJoinedRecently" checked="checked" /> <span localeMessage="NonJoinedRecentlyAccounts">Non-Joined Recently Accounts</span>
+                        </label>
+                        <label for="cbFollowPrivateAccounts" id="lblFollowPrivateAccounts">
+                            <input type="checkbox" id="cbFollowPrivateAccounts" checked="checked" /> <span localeMessage="PrivateAccounts">Private Accounts</span>
+                        </label>
+                        <label for="cbFilterNonPrivate">
+                            <input type="checkbox" id="cbFilterNonPrivate" checked="checked" /> <span localeMessage="PublicAccounts">Public Accounts</span></label>
+                            <label for="cbFilterVerified">
+                                <input type="checkbox" id="cbFilterVerified" checked="checked" /> <span localeMessage="VerifiedAccounts">Verified Accounts</span></label>
+                                <label for="cbFilterNonVerified">
+                                    <input type="checkbox" id="cbFilterNonVerified" checked="checked" /> <span localeMessage="NonVerifiedAccounts">Non-Verified Accounts</span></label>
+                                    <br>
+                                    <br>
+                                    <label for="cbFilterExternalUrlContains">
+                                        <input type="checkbox" id="cbFilterExternalUrlContains" />
+                                        <span localeMessage="ExternalUrlContainsText">Link in Bio Has</span>
+                                        <input type="text" id="txtFilterExternalUrlContains" placeholder="youtube.com">
+                                    </label>
+                                    <label for="cbFilterExternalUrlNotContains">
+                                        <input type="checkbox" id="cbFilterExternalUrlNotContains" />
+                                        <span localeMessage="ExternalUrlNotContainsText">Link in Bio Does Not Have</span>
+                                        <input type="text" id="txtFilterExternalUrlNotContains" placeholder="onlyfans.com">
+                                    </label>
+                                    <label for="cbFilterBioContains">
+                                        <input type="checkbox" id="cbFilterBioContains" />
+                                        <span localeMessage="BioContainsText">Bio Has Text</span>
+                                        <input type="text" id="txtFilterBioContains">
+                                    </label>
+                                    <label for="cbFilterBioNotContains">
+                                        <input type="checkbox" id="cbFilterBioNotContains" />
+                                        <span localeMessage="BioNotContainsText">Bio Does Not Have Text</span>
+                                        <input type="text" id="txtFilterBioNotContains">
+                                    </label>
+                                    <label for="cbFilterBusiness" id="lblFilterBusiness">
+                                        <input type="checkbox" id="cbFilterBusiness" checked="checked" /> <span localeMessage="BusinessAccounts">Business Accounts</span>
+                                    </label>
+                                    <label for="cbFilterNonBusiness">
+                                        <input type="checkbox" id="cbFilterNonBusiness" checked="checked" /> <span localeMessage="NonBusinessAccounts">Non-Business Accounts</span></label>
+                                        <label for="cbFilterBusinessCategoryNameContains">
+                                            <input type="checkbox" id="cbFilterBusinessCategoryNameContains" />
+                                            <span localeMessage="BusinessCategoryNameContainsText">Business Category Has Text</span>
+                                            <input type="text" id="txtFilterBusinessCategoryNameContains">
+                                        </label>
+                                        <label for="cbFilterBusinessCategoryNameNotContains">
+                                            <input type="checkbox" id="cbFilterBusinessCategoryNameNotContains" />
+                                            <span localeMessage="BusinessCategoryNameNotContainsText">Business Category Does Not Have Text</span>
+                                            <input type="text" id="txtFilterBusinessCategoryNameNotContains">
+                                        </label>
+                                        <br>
+                                        <br>
+                                        <div localeMessage="BelowFiltersApply">The below filters only apply when following (not unfollowing):</div>
+                                        <br>
+                                        <br>
+                                        <label for="cbFollowsMe">
+                                            <input type="checkbox" id="cbFollowsMe" /> <span localeMessage="FollowsMe">Follows Me</span></label>
+                                            <label for="cbNonFollowsMe">
+                                                <input type="checkbox" id="cbNonFollowsMe" checked="checked" /> <span localeMessage="DoesntFollowMe">Doesn't Follow Me</span>
+                                            </label>
+                                            <label for="cbFollowedByMe">
+                                                <input type="checkbox" id="cbFollowedByMe" /> <span localeMessage="FollowedByMe">Followed by Me</span></label>
+                                                <label for="cbNonFollowedByMe">
+                                                    <input type="checkbox" id="cbNonFollowedByMe" checked="checked" /> <span localeMessage="NotFollowedByMe">Not Followed by Me</span></label>
+                                                    <br>
+                                                    <br>
+                                                    <div class="igBotInjectedButton" id="btnResetFilter" localeMessage="ResetFilters">Reset Filters</div>
+                                                    <div class="igBotInjectedButton" id="btnApplyFilter" localeMessage="ApplyFilters">Apply Filters to Current Queue</div>
+                                                </div>
+                                            </div>
+                                            <div class="tab4">
+                                                <div id="igBotOptions">
+                                                    <h3 localeMessage="Settings">Settings</h3>
+                                                    <details id="relinkSubscription">
+                                                    <summary localeMessage="relinkSubscription">Re-link Subscription</summary>
+                                                    <br>
+                                                    <form id="formRelinkSubscription">
+                                                        <input type="text" id="email" name="email" placeholder="email@address.com" style="border:1px solid #666;"></input>
+                                                        <input type="text" id="last4" name="last4" placeholder="Last 4 digits of payment card" maxlength="4" style="border:1px solid #666;"></input>
+                                                        <select id="month" name="month">
+                                                            <option>CC Exp Month</option>
+                                                            <option value="01">01</option>
+                                                            <option value="02">02</option>
+                                                            <option value="03">03</option>
+                                                            <option value="04">04</option>
+                                                            <option value="05">05</option>
+                                                            <option value="06">06</option>
+                                                            <option value="07">07</option>
+                                                            <option value="08">08</option>
+                                                            <option value="09">09</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                        </select>
+                                                        <select id="year" name="year">
+                                                            <option>CC Exp Year</option>
+                                                            <option value="2022">2022</option>
+                                                            <option value="2023">2023</option>
+                                                            <option value="2024">2024</option>
+                                                            <option value="2025">2025</option>
+                                                            <option value="2026">2026</option>
+                                                            <option value="2027">2027</option>
+                                                            <option value="2028">2028</option>
+                                                            <option value="2029">2029</option>
+                                                            <option value="2030">2030</option>
+                                                            <option value="2031">2031</option>
+                                                            <option value="2032">2032</option>
+                                                        </select>
+                                                    </form>
+                                                    <br>
+                                                    <button id="btnFindSubscription">Find Subscription</button>
+                                                    <br>
+                                                    <div id="resultFindSubscription"></div>
+                                                    <br>
+                                                    </details>
+                                                    <details id="detailsPerformanceOptions">
+                                                    <summary localeMessage="PerformanceOptions">Performance Options</summary>
+                                                    <div class="followOptions">
+                                                        <label for="cbShowStamps">
+                                                            <input type="checkbox" checked="checked" id="cbShowStamps" /> <span localeMessage="cbShowStamps">Show stamps in queue</span>
+                                                        </label>
+                                                        <label for="cbRemoveFromQueue" style="display:none;">
+                                                            <input type="checkbox" id="cbRemoveFromQueue" /> <span localeMessage="cbRemoveFromQueue">Remove accounts from queue after processing</span>
+                                                        </label>
+                                                        <label for="cbConvenienceLinks">
+                                                            <input type="checkbox" checked="checked" id="cbConvenienceLinks" /> <span localeMessage="cbConvenienceLinks">Show convenience buttons in feed (Whitelist/Unfollow)</span>
+                                                        </label>
+                                                        <label for="cbShowUnfollowingInQueue">
+                                                            <input type="checkbox" checked="checked" id="cbShowUnfollowingInQueue" /> <span localeMessage="cbShowUnfollowingInQueue">Show unfollowing in queue</span></label>
+                                                            <label for="cbShowLikesInQueue">
+                                                                <input type="checkbox" checked="checked" id="cbShowLikesInQueue" /> <span localeMessage="cbShowLikesInQueue">Show likes in queue</span></label>
+                                                                <label for="cbShowProfilePicInQueue">
+                                                                    <input type="checkbox" checked="checked" id="cbShowProfilePicInQueue" /> <span localeMessage="cbShowProfilePicInQueue">Show profile pictures in queue</span></label>
+                                                                    <label for="cbClickNotNow">
+                                                                        <input type="checkbox" id="cbClickNotNow" /><span localeMessage="cbClickNotNow">Click "Not Now" when Instagram asks to show notifications</span></label>
+                                                                        <label for="cbLoadQueueOnStartup">
+                                                                            <input type="checkbox" id="cbLoadQueueOnStartup" /><span localeMessage="cbLoadQueueOnStartup">Load the last known queue on startup</span></label>
+                                                                        </div>
+                                                                        </details>
+                                                                        <details id="detailsWaitTime">
+                                                                        <summary localeMessage="ConfigureWaitTimes">Configure Wait Times</summary>
+                                                                        <div class="followOptions">
+                                                                            <span><span localeMessage="Wait">Wait</span> <input type="number" value="60" step="1" min="0" id="textSecondsBetweenActions"></input> <span localeMessage="secondsAfterAction">seconds after follow/unfollow/like</span></span>
+                                                                            <span><span localeMessage="Wait">Wait</span> <input type="number" value="1" step="1" min="0" id="textSecondsAfterSkip"></input> <span localeMessage="secondsAfterSkip">seconds after skip</span></span>
+                                                                            <label for="cbRandomizeTimeDelay">
+                                                                                <input type="checkbox" checked="checked" id="cbRandomizeTimeDelay" /><span localeMessage="randomizeWaitTime">Randomize wait time by up to</span>
+                                                                                <input type="number" value="50" step="1" min="0" id="igBotPercentRandomTimeDelay"></input>%
+                                                                            </label>
+                                                                            <span><span localeMessage="Wait">Wait</span> <input type="number" value="10" step="1" id="textMinutesAfterSoftRateLimit"></input> <span localeMessage="minutesAfterSoft">minutes after soft rate limit</span></span>
+                                                                            <span><span localeMessage="Wait">Wait</span> <input type="number" value="1" step="1" id="textHoursAfterHardRateLimit"></input> <span localeMessage="hoursAfterHard">hours after hard rate limit</span></span>
+                                                                            <span><span localeMessage="Wait">Wait</span> <input type="number" value="10" step="1" id="textMinutesAfter429RateLimit"></input> <span localeMessage="minutesAfter429">minutes after 429 rate limit</span></span>
+                                                                            <span>
+                                                                                <input type="checkbox" id="cbuseTimeDelayAfterAdditionalInfo" />
+                                                                                <span localeMessage="Wait">Wait</span> <input type="number" value="2" step="1" id="texttimeDelayAfterAdditionalInfo"></input> <span localeMessage="SecondsAfterAdditionalInfo">seconds after loading additional account info</span></span>
+                                                                                <span>
+                                                                                    <input type="checkbox" id="cbLimitActions" /> <span localeMessage="Wait">Wait</span> <input type="number" value="24" step="1" id="textLimitActionsPerTime"> <span localeMessage="hoursAfterActions">hours after performing</span> <input type="number" value="50" step="1" id="textLimitActionsPer"></input> <span localeMessage="followsUnfollows">follows / unfollows</span>
+                                                                                </span>
+                                                                            </div>
+                                                                            </details>
+                                                                            <details id="detailsProcessingQueueOptions">
+                                                                            <summary localeMessage="QueueProcessingOptions">Queue Processing Options</summary>
+                                                                            <div class="followOptions">
+                                                                                <label for="cbAutoSaveQueue">
+                                                                                    <input type="checkbox" id="cbAutoSaveQueue" /> <span localeMessage="saveQueueAutomatically">Automatically save queue (to local storage) after each processed account</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            </details>
+                                                                            <details id="detailsFollowingOptions">
+                                                                            <summary localeMessage="FollowingOptions">Following Options</summary>
+                                                                                <div class="followOptions">
+                                                                                    <label for="cbFollowAlreadyAttempted">
+                                                                                    <input type="checkbox" id="cbFollowAlreadyAttempted" /> <span localeMessage="followAlreadyAttempted">Follow people I've already attempted</span></label>
+                                                                                    <label for="cbApplyFilterAutomatically" title="Apply the currently selected filters automatically from now on">
+                                                                                        <input type="checkbox" id="cbApplyFilterAutomatically" /> <span localeMessage="applyFiltersAutomatically">Apply Filters Automatically While Following</span></label>
+                                                                                </div>
+                                                                            </details>
+                                                                            <details id="detailsUnfollowingOptions">
+                                                                            <summary localeMessage="UnfollowingOptions">Unfollowing Options</summary>
+                                                                            <div class="followOptions">
+                                                                                <label for="cbDontUnfollowFollowers">
+                                                                                    <input type="checkbox" checked="checked" id="cbDontUnfollowFollowers" /> <span localeMessage="dontUnfollowFollowers">Don't unfollow people who follow me</span></label>
+                                                                                    <label for="cbUnfollowOld">
+                                                                                    <input type="checkbox" id="cbUnfollowOld" /> <span localeMessage="unfollowDaysAgo1">Unfollow people I began following more than</span>
+                                                                                    <input type="number" value="30" step="1" id="textUnfollowOld"></input> <span localeMessage="unfollowDaysAgo2">days ago (even if they follow me)</span></label>
+                                                                                    <label for="cbDontUnfollowFresh">
+                                                                                    <input type="checkbox" checked="checked" id="cbDontUnfollowFresh" /> <span localeMessage="dontUnfollowDaysAgo1">Don't unfollow people I began following less than</span>
+                                                                                    <input type="number" value="3" step="1" id="textUnfollowNew"></input> <span localeMessage="dontUnfollowDaysAgo2">days ago</span></label>
+                                                                                    <label for="cbDontUnfollowNonGrowbot">
+                                                                                    <input type="checkbox" checked="checked" id="cbDontUnfollowNonGrowbot" /> <span localeMessage="dontUnfollowNonGrowbot">Don't unfollow people followed outside of Growbot</span></label>
+                                                                                    <label for="cbDontUnfollowFilters">
+                                                                                        <input type="checkbox" checked="checked" id="cbDontUnfollowFilters" /> <span localeMessage="dontUnfollowFilters">Don't unfollow people who match my filters</span></label>
+                                                                                    </div>
+                                                                                    </details>
+                                                                            <details id="detailsUnfollowingOptions">
+                                                                            <summary localeMessage="RemovingAndBlockingOptions">Removing and Blocking Options</summary>
+                                                                            <div class="followOptions">
+                                                                                <label for="cbDontRemoveOrBlockFilters">
+                                                                                    <input type="checkbox" checked="checked" id="cbDontRemoveOrBlockFilters" /> <span localeMessage="dontRemoveOrBlockFilters">Don't remove or block people who match my filters</span></label>
+                                                                                </div>
+                                                                                </details>
+                                                                        </div>
+                                                                    </div>
+                                                                <div class="tab5">
+                                                                    <div id="igBotLog">
+                                                                        <h3 localeMessage="Log">Log</h3>
+                                                                        <textarea id="txtConsole" spellcheck="false"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab6">
+                                                                    <div class="igBotNewsAndUpdates">
+                                                                        <h3 localeMessage="Updates">Growbot News / Updates / Changelog</h3>
+                                                                        <p>Note: Growbot will be translated into languages other than English in the near future: if you are fluent in both Growbot and another language, and can help translate, please contact growbotautomator@gmail.com</p>
+                                                                        <details id="detailsUpdateInstructions" class="igBotUpdateNote">
+                                                                        <summary>You can force Chrome to check for Growbot updates (you have version <span id="igBotExtensionVersion">x.x.x</span>)</summary>
+                                                                        <ol>
+                                                                            <li> Go to chrome://extensions by typing it into the address bar</li>
+                                                                            <li> Check the Developer mode checkbox on the right-hand side.</li>
+                                                                            <li> Click the "Update extensions now" button. </li>
+                                                                        </ol>
+                                                                        </details>
+                                                                        <p class="igBotUpdateNote">v2.0.2 updates:
+                                                                            <br> - modified default sort so it's easier to see which accounts are being processed
+                                                                            <br> - changed some button titles and added arrows to make interface slightly easier to understand
+                                                                            <br> - select all button now only selects showing accounts when using the inline filters on the table
+                                                                            <br> - fixed bugs when adding to whitelist, and whitelist is now automatically saved after adding to it
+                                                                            <br> - fixed bug when removing checked accounts
+                                                                            
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v2.0.1 updates:
+                                                                            <br> - Growbot 2.0 Beta!  Now you can see and sort much more info about accounts in the queue.
+                                                                            <br> - Reorganized buttons/menus for less visual clutter
+                                                                            <br> - Tabs for better organization
+                                                                            <br> - Fix bug with stop button (finally!)
+                                                                            <br> - Instagram has disabled the Load Pending Follow Requests feature.  The info is accessible, but you have to manually download your data from https://www.instagram.com/download/request, Growbot can no longer do it for you :(
+                                                                            <br> - As always, please contact me if there are bugs or issues!
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.9.8 updates:
+                                                                            <br> - fix bug with external url filtering
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.9.7 updates:
+                                                                            <br> - add business category name to filters
+                                                                            <br> - fix bug with free trials
+                                                                            <br> - fix problem where checkboxes would be hidden
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.9.6 updates:
+                                                                            <br> - fix bug with unfollowing filters
+                                                                            <br> - add option to have a delay after getting additional data for account (this should be useful for avoiding rate limits when sorting or manually filtering queues)
+                                                                            <br> - add performance option to disable loading profile picture images in queue
+                                                                            <br> - add filter/sort options for people who do not have a profile picture set (experimental)
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.9.5 updates:
+                                                                            <br> - add bug fix for last posted filter
+                                                                            <br> - add filter for mutual followers
+                                                                            <br> - add filters for link in bio (contains or doesn't contain... these can be comma separated eg "youtube.com,linktr.ee")
+                                                                            <br> - filter icon will now be colored in based on which process queue option you have selected and if it is enabled for that option)
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.9.4 updates:
+                                                                            <br> - show filter reason in log when unfollowing/removing/blocking
+                                                                        </p>
+                                                                        <details class="igBotUpdateNote">
+                                                                        <summary>Older Update Notes</summary>
+                                                                        <p class="igBotUpdateNote">v0.9.3 updates:
+                                                                            <br> - random css fixes/tweaks
+                                                                            <br> - add x buttons to settings and filters
+                                                                            <br> - make log persistent
+                                                                            <br> - include log in email links
+                                                                            <br> - move Growbot icon to right side, and have a safety fallback for when instagram makes changes that hide icon
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.9.2 updates:
+                                                                            <br> - Fix bug with Like Only mode loading your own photos in some scenarios
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.9.1 updates:
+                                                                            <br> - Fix some bugs with loading posters from hashtags, fix fonts when instagram loads in dark mode
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.9.0 updates:
+                                                                            <br> - New Feature! Load Posters from Hashtag Page!
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.8.7 updates:
+                                                                            <br> - New Features! Remove or Block accounts, with filters (check the box in settings to use filters)
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.8.6 updates:
+                                                                            <br> - fix issue where people would be unfollowed even if they follow you back
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.8.5 updates:
+                                                                            <br> - fix icon not showing up due to instagram's changes (again)
+                                                                            <br> - note: you can usually use the extension toolbar icon to access Growbot if this happens
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.8.4 updates:
+                                                                            <br> - add fallback api request for blocked accounts, fix loop bug which was making rate limits worse for some users
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.8.2 updates:
+                                                                            <br> - fix bug with unfollowing people who don't follow you back
+                                                                            <br> - fix bug with loading additional data
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.8.1 updates:
+                                                                            <br> - Bug fixes and behind the scenes updates - please report any errors!!
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.7.6 updates:
+                                                                            <br> - Bug fixes and behind the scenes updates - please report any errors
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.7.5 updates:
+                                                                            <br> - fix icon not showing up on profile pages due to instagram's changes (again)
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.7.4 updates:
+                                                                            <br> - fix icon not showing up on profile pages due to instagram's changes (again)
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.7.3 updates:
+                                                                            <br> - fix icon not showing up on profile pages due to instagram's changes
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.7.2 updates:
+                                                                            <br> - make stop button stop actions without reloading page
+                                                                            <br> - change interface colors to a nice blue color
+                                                                            <br> - make buttons which would not currently do anything gray until they would work
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.7.0 updates:
+                                                                            <br> - fix bug where sometimes it would unfollow people who were followed outside of Growbot even when that option was checked
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.6.9 updates:
+                                                                            <br> - increase default action delay to 3 minutes
+                                                                            <br> - add sorting options: username, fullname
+                                                                            <br> - fix UI glitch where changing number of hashtag likes wouldn't stick
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.6.8 updates:
+                                                                            <br> - fix issue with all private accounts being filtered due to not knowing last post date
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.6.7 updates:
+                                                                            <br> - fix bug with filtering by last post date
+                                                                            <br> - fix bug with likes not using the configured delay times
+                                                                            <br> - fix bug where time would be wasted loading additional data for the same account twice if queue was previously saved
+                                                                            <br> - fix bug where some actions would delay only 1 minute after 429 error from instagram, instead of using configured time delay
+                                                                            <br> - output and log message after additional data is loaded for each account
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.6.5 updates:
+                                                                            <br> - fix issue with unfollowing with filters
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.6.2 updates:
+                                                                            <br> - made a feature to allow a break after a certain number of actions taken - find it in the options under wait times
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.6.1 updates:
+                                                                            <br> - Added new filters for business account, and recently joined
+                                                                            <br> - the Log will tell you the reason someone was filtered when following
+                                                                            <br> - remove annoying spellcheck lines from Log
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.5.98 updates:
+                                                                            <br> - Now allows user to set the wait time after a 429 rate limit and increase default from 5 seconds to 60 seconds
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.5.97 updates:
+                                                                            <br> - Fixed "Error: must be on an instagram user page (or try reloading)." issue, which should also help reduce wait time after the "Error please wait a few minutes before you try again" for users who experience that. Please continue reporting issues via the email link, thank you!
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.5.95 updates:
+                                                                            <br> - fixed like posts from hashtag functionality after instagram update
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.5.9 updates:
+                                                                            <br> - add more detailed information for hard rate limits from instagram
+                                                                            <br> - If you receive a message about your action being blocked, the message comes from Instagram, not from Growbot.
+                                                                            You can wait for ig to lift the block, then you can use smaller queues in the future to try not to get blocked by instagram again. Some users have reported the block going away by logging out from instagram and logging back in, and/or clearing their browser cache.
+                                                                        </p>
+                                                                        <p class="igBotUpdateNote">v0.5.7 updates:
+                                                                            <br> - fix bug where removed accounts from the whitelist were not saved
+                                                                            <br> - add option to automatically save queue after each processed account
+                                                                        </p>
+                                                                        </details>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab7">
+                                                                    <div id="faqhelp">
+                                                                        <h3 localeMessage="Help">Help / Frequently Asked Questions</h3>
+                                                                        <p>Please read the entire FAQ. If your question is not answered, contact me. Please include screenshots, dev console, and log.
+                                                                        </p>
+                                                                        <iframe id="iframeFAQ" src="https://www.growbotforfollowers.com/index.php?faqonly=true"></iframe>
+                                                                        <p>
+                                                                            <a href="https://www.growbotforfollowers.com/" target="_blank" id="iconHelp">https://www.growbotforfollowers.com</a>
+                                                                            <a href="mailto:growbotautomator@gmail.com" id="iconEmail" class="growbotEmailLink">growbotautomator@gmail.com</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                    </div>
+                                                </div>

@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "version": "2.0.3",
+    "manifest_version": 3,
+    "content_security_policy": {
+        "extension_pages": "object-src 'self'; script-src 'self'; frame-src 'self' https://www.growbotforfollowers.com;"
+    },
+    "content_scripts": [{
+        "matches": ["https://*.instagram.com/*", "https://*.growbotforfollowers.com/*"],
+        "css": ["theme.blue.css", "contentscript.css"],
+        "js": ["jquery3.js", "wNumb.js", "nouislider.js", "jquery.tablesorter.js","jquery.tablesorter.widgets.js", "widget-pager.js", "contentscript.js"],
+        "run_at": "document_end",
+        "all_frames": false
+    }],
+    "background": {
+        "service_worker": "backgroundscript.js"
+    },
+    "action": {
+        "default_title": "GrowBot Automator for Instagram"
+    },
+    "icons": {
+        "16": "icon_16.png",
+        "48": "icon_48.png",
+        "128": "icon_128.png"
+    },
+    "permissions": [
+        "tabs",
+        "scripting",
+        "storage",
+        "unlimitedStorage"
+    ],
+    "host_permissions": ["https://*.instagram.com/*", "https://*.growbotforfollowers.com/*"],
+    "web_accessible_resources": [{
+        "resources": ["*.js", "*.png", "*.css", "*.json", "*.html"],
+        "matches": ["https://*.instagram.com/*", "https://*.growbotforfollowers.com/*"]
+    }]
+}

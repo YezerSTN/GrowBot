@@ -1,0 +1,561 @@
+{
+    "appName":
+    {
+        "message": "GrowBot Automator for Instagram"
+    },
+    "appDesc":
+    {
+        "message": "Automatic follow/unfollow/like with advanced filters, randomized timers, and more high-tech features."
+    },
+    "Followers":
+    {
+        "message": "Followers"
+    },
+    "Following":
+    {
+        "message": "Following"
+    },
+    "Posts":
+    {
+        "message": "Posts"
+    },
+    "Private":
+    {
+        "message": "Private"
+    },
+    "Verified":
+    {
+        "message": "Verified"
+    },
+    "Last_Post_Date":
+    {
+        "message": "Last Post Date"
+    },
+    "Follow_Ratio":
+    {
+        "message": "Follow Ratio"
+    },
+    "Username":
+    {
+        "message": "Username"
+    },
+    "Full_Name":
+    {
+        "message": "Full Name"
+    },
+    "queueLimit":
+    {
+        "message": "Limit queue to"
+    },
+    "Settings":
+    {
+        "message": "Settings"
+    },
+    "PerformanceOptions":
+    {
+        "message": "Performance Options"
+    },
+    "cbShowStamps":
+    {
+        "message": "Show stamps in queue"
+    },
+    "cbRemoveFromQueue":
+    {
+        "message": "Remove accounts from queue after processing"
+    },
+    "cbConvenienceLinks":
+    {
+        "message": "Show convenience buttons in feed (Whitelist/Unfollow)"
+    },
+    "cbShowUnfollowingInQueue":
+    {
+        "message": "Show unfollowing in queue"
+    },
+    "cbShowLikesInQueue":
+    {
+        "message": "Show likes in queue"
+    },
+    "ConfigureWaitTimes":
+    {
+        "message": "Configure Wait Times"
+    },
+    "Wait":
+    {
+        "message": "Wait"
+    },
+    "secondsAfterAction":
+    {
+        "message": "seconds after follow/unfollow/like"
+    },
+    "secondsAfterSkip":
+    {
+        "message": "seconds after skip"
+    },
+    "randomizeWaitTime":
+    {
+        "message": "Randomize wait time by up to"
+    },
+    "minutesAfterSoft":
+    {
+        "message": "minutes after soft rate limit"
+    },
+    "hoursAfterHard":
+    {
+        "message": "hours after hard rate limit"
+    },
+    "minutesAfter429":
+    {
+        "message": "minutes after 429 rate limit"
+    },
+    "hoursAfterActions":
+    {
+        "message": "hours after performing"
+    },
+    "followsUnfollows":
+    {
+        "message": "follows / unfollows"
+    },
+    "QueueProcessingOptions":
+    {
+        "message": "Queue Processing Options"
+    },
+    "saveQueueAutomatically":
+    {
+        "message": "Automatically save queue (to local storage) after each processed account"
+    },
+    "FollowingOptions":
+    {
+        "message": "Following Options"
+    },
+    "followAlreadyAttempted":
+    {
+        "message": "Follow people I've already attempted"
+    },
+    "applyFiltersAutomatically":
+    {
+        "message": "Apply Filters Automatically While Following"
+    },
+    "UnfollowingOptions":
+    {
+        "message": "Unfollowing Options"
+    },
+    "dontUnfollowFollowers":
+    {
+        "message": "Don't unfollow people who follow me"
+    },
+    "unfollowDaysAgo1":
+    {
+        "message": "Unfollow people I began following more than"
+    },
+    "unfollowDaysAgo2":
+    {
+        "message": "days ago (even if they follow me)"
+    },
+    "dontUnfollowDaysAgo1":
+    {
+        "message": "Don't unfollow people I began following less than"
+    },
+    "dontUnfollowDaysAgo2":
+    {
+        "message": "days ago"
+    },
+    "dontUnfollowNonGrowbot":
+    {
+        "message": "Don't unfollow people followed outside of Growbot"
+    },
+    "dontUnfollowFilters":
+    {
+        "message": "Don't unfollow people who match my filters"
+    },
+    "AccountFilters":
+    {
+        "message": "Account Filters"
+    },
+    "AccountFiltersHint":
+    {
+        "message": "You can enable automatically apply filters when following or unfollowing in settings. This is recommended for efficiency and avoiding rate limits."
+    },
+    "FollowRatio":
+    {
+        "message": "Follow Ratio"
+    },
+    "LastPosted":
+    {
+        "message": "Last Posted (days ago) Note: Growbot cannot know when a private account last posted, so this filter does not apply to private accounts.."
+    },
+    "BioContainsText":
+    {
+        "message": "Bio Has Text: "
+    },
+    "BioNotContainsText":
+    {
+        "message": "Bio Doesn't Have Text: "
+    },
+    "PrivateAccounts":
+    {
+        "message": "Private Accounts"
+    },
+    "PublicAccounts":
+    {
+        "message": "Public Accounts"
+    },
+    "VerifiedAccounts":
+    {
+        "message": "Verified Accounts"
+    },
+    "NonVerifiedAccounts":
+    {
+        "message": "Non-Verified Accounts"
+    },
+    "BusinessAccounts":
+    {
+        "message": "Business Accounts"
+    },
+    "NonBusinessAccounts":
+    {
+        "message": "Non-Business Accounts"
+    },
+    "JoinedRecentlyAccounts":
+    {
+        "message": "Joined Recently Accounts"
+    },
+    "NonJoinedRecentlyAccounts":
+    {
+        "message": "Non-Joined Recently Accounts"
+    },
+    "BelowFiltersApply":
+    {
+        "message": "The below filters only apply when following (not unfollowing):"
+    },
+    "FollowsMe":
+    {
+        "message": "Follows Me"
+    },
+    "DoesntFollowMe":
+    {
+        "message": "Doesn't Follow Me"
+    },
+    "FollowedByMe":
+    {
+        "message": "Followed by Me"
+    },
+    "NotFollowedByMe":
+    {
+        "message": "Not Followed by Me"
+    },
+    "ResetFilters":
+    {
+        "message": "Reset Filters"
+    },
+    "ApplyFilters":
+    {
+        "message": "Apply Filters to Current Queue"
+    },
+    "LoadCurrentFollowers":
+    {
+        "message": "Load Current Page's Followers",
+        "title": "Loads the current page's followers into the queue"
+    },
+    "LoadCurrentFollowing":
+    {
+        "message": "Load Current Page's Following",
+        "title": "Loads accounts which the current page account is following into the queue"
+    },
+    "LoadPendingFollowRequests":
+    {
+        "message": "Load Pending Follow Requests",
+        "title": "Load requests to follow private accounts which have not been approved or rejected yet (these count toward your follower total)"
+    },
+    "LoadCommenters":
+    {
+        "message": "Load Commenters",
+        "title": "Loads accounts which commented on the current pages media"
+    },
+    "LoadLikers":
+    {
+        "message": "Load Likers",
+        "title": "Loads accounts which liked the current pages media"
+    },
+    "LoadQueue":
+    {
+        "message": "Load Queue"
+    },
+    "SaveQueue":
+    {
+        "message": "Save Queue"
+    },
+    "SelectAll":
+    {
+        "message": "Select All",
+        "title": "Select all shown accounts"
+    },
+    "SelectNone":
+    {
+        "message": "Select None",
+        "title": "Select nothing"
+    },
+    "InvertSelection":
+    {
+        "message": "Invert selection",
+        "title": "Select the opposite of what is currently selected"
+    },
+    "RemoveSelected":
+    {
+        "message": "Remove selected",
+        "title": "Remove all the selected accounts"
+    },
+    "GetMoreData":
+    {
+        "message": "Get More Data",
+        "title": "Gets more data about each account in queue: Private Status, Followers, Following, Post Count"
+    },
+    "AddToWhitelist":
+    {
+        "message": "Add selected to whitelist",
+        "title": "Add selected accounts to list of accounts never to UNfollow"
+    },
+    "LoadWhiteList":
+    {
+        "message": "Load whitelist"
+    },
+    "SaveWhiteList":
+    {
+        "message": "Save whitelist",
+        "title": "Saves the whitelist to local storage and / or disk"
+    },
+    "Hide":
+    {
+        "message": "Hide"
+    },
+    "LikeUsersLatest":
+    {
+        "message": "Like User 's Latest"
+    },
+    "PicsWhenFollowing":
+    {
+        "message": "Pic(s) when Following"
+    },
+    "Follow":
+    {
+        "message": "Follow"
+    },
+    "Unfollow":
+    {
+        "message": "Unfollow"
+    },
+    "LikeOnly":
+    {
+        "message": "Like Only"
+    },
+    "ProcessQueue":
+    {
+        "message": "Process Queue"
+    },
+    "Like":
+    {
+        "message": "Like"
+    },
+    "PostsFrom":
+    {
+        "message": "Posts from"
+    },
+    "HashtagPage":
+    {
+        "message": "Hashtag Page"
+    },
+    "PostsFromFeed":
+    {
+        "message": "Posts from Feed"
+    },
+    "Stop":
+    {
+        "message": "Stop!"
+    },
+    "Log":
+    {
+        "message": "Log"
+    },
+    "Done":
+    {
+        "message": "Done. "
+    },
+    "QueueLimitReached":
+    {
+        "message": "Queue limit reached. "
+    },
+    "PreviouslyAttempted":
+    {
+        "message": "Previously attempted to follow: $number$ accounts",
+        "placeholders":
+        {
+            "number":
+            {
+                "content": "$1",
+                "example": "2874"
+            }
+        }
+    },
+    "PreviouslyLiked":
+    {
+        "message": "Previously Liked: $number$ posts",
+        "placeholders":
+        {
+            "number":
+            {
+                "content": "$1",
+                "example": "2874"
+            }
+        }
+    },
+    "AddedToWhitelist":
+    {
+        "message": " added to whitelist"
+    },
+    "AlreadyOnWhitelist":
+    {
+        "message": " already on whitelist"
+    },
+    "WhitelistLoaded":
+    {
+        "message": "Whitelist loaded: $number$ accounts",
+        "placeholders":
+        {
+            "number":
+            {
+                "content": "$1",
+                "example": "2874"
+            }
+        }
+    },
+    "WhitelistSavedLocal":
+    {
+        "message": "Whitelist saved to local storage"
+    },
+    "WhitelistSavedFile":
+    {
+        "message": "Whitelist saved to file growbot-whitelist.txt"
+    },
+    "WhitelistLoadLocal":
+    {
+        "message": "Load last known whitelist"
+    },
+    "WhitelistLoadFile":
+    {
+        "message": "Load whitelist from file"
+    },
+    "WhitelistLoadQuestion":
+    {
+        "message": "Where would you like to load the whitelist from?"
+    },
+    "QueueLoaded":
+    {
+        "message": "Queue loaded: $number$ accounts",
+        "placeholders":
+        {
+            "number":
+            {
+                "content": "$1",
+                "example": "2874"
+            }
+        }
+    },
+    "QueueSavedLocal":
+    {
+        "message": "Queue saved to local storage"
+    },
+    "QueueSavedFile":
+    {
+        "message": "Queue saved to file growbot-queue.txt"
+    },
+    "QueueLoadLocal":
+    {
+        "message": "Load last known queue"
+    },
+    "QueueLoadFile":
+    {
+        "message": "Load queue from file"
+    },
+    "QueueLoadQuestion":
+    {
+        "message": "Where would you like to load the queue from?"
+    },
+    "QueueEmpty":
+    {
+        "message": "No accounts left in queue!"
+    },
+    "RateLimitHard":
+    {
+        "message": "(hard) 400 rate limit encountered, waiting $time$ hours",
+        "placeholders":
+        {
+            "time":
+            {
+                "content": "$1",
+                "example": "48"
+            }
+        }
+    },
+    "RateLimitSoft":
+    {
+        "message": "(soft) 403 soft limit encountered, waiting $time$ minutes",
+        "placeholders":
+        {
+            "time":
+            {
+                "content": "$1",
+                "example": "30"
+            }
+        }
+    },
+    "RateLimit429":
+    {
+        "message": "429 rate limit encountered, waiting $time$ minutes",
+        "placeholders":
+        {
+            "time":
+            {
+                "content": "$1",
+                "example": "1"
+            }
+        }
+    },
+    "AccountsLoaded":
+    {
+        "message": "Loaded $tmpQueue$ additional accounts, $acctsQueue$ accounts loaded so far",
+        "placeholders":
+        {
+            "tmpQueue":
+            {
+                "content": "$1",
+                "example": "24"
+            },
+            "acctsQueue":
+            {
+                "content": "$2",
+                "example": "500"
+            }
+        }
+    },
+    "DataLoaded":
+    {
+        "message": "Loaded additional data for $tmpQueue$ out of $acctsQueue$ accounts",
+        "placeholders":
+        {
+            "tmpQueue":
+            {
+                "content": "$1",
+                "example": "24"
+            },
+            "acctsQueue":
+            {
+                "content": "$2",
+                "example": "500"
+            }
+        }
+    },
+    "FinishedAdditionalData":
+    {
+        "message": "Finished getting additional info, save the queue now?"
+    }
+
+}
