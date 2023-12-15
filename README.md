@@ -37,7 +37,7 @@
 <br />
 
 <p align="center">
-  <img src="https://github.com/YezerSTN/GrowBot/assets/109930585/c2d7f5f3-b1cc-465c-b21f-935ad4ccebff" width="1400">
+  <img src="https://github.com/YezerSTN/GrowBot/assets/109930585/9d9b0a63-591f-4f15-9aef-618b80dc4fe0" width="1400">
 	
 ## How to Use
 
