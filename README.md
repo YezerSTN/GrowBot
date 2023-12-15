@@ -10,9 +10,10 @@
    
  > <p align="center">ᵔᵔ﹗ ﹙𝐼 𝑙𝑜𝑣𝑒 𝑡𝑜 𝑔𝑒𝑡 𝑚𝑦 ℎ𝑜𝑝𝑒𝑠 𝑢𝑝﹚<p>
 		
-**Version:** Version: This version of GrowBot has all the options offered by the <b>BUYED</b> version. 
-	
-**Rationale:** All this without any profit motive and so that you can take advantage of all the potential of this tool.
+> [!NOTE]
+> **Version:** Version: This version of GrowBot has all the options offered by the <b>BUYED</b> version. 
+>
+> **Rationale:** All this without any profit motive and so that you can take advantage of all the potential of this tool.
 <br />
 
 # GrowBot Features
@@ -39,7 +40,8 @@
 <p align="center">
   <img src="https://github.com/YezerSTN/GrowBot/assets/109930585/9d9b0a63-591f-4f15-9aef-618b80dc4fe0" width="1400">
 	
-## How to Use
+> [!IMPORTANT]
+> ## How to Use
 
 **STEP 1** Using this extension is easy, just go to [releases](https://github.com/YezerSTN/GrowBot/releases/) and download the latest version. 
 
